@@ -8,7 +8,7 @@
 
 在谷歌找vue 多页面，实例还是比较少，功夫不负有心人，在yaoyao1987那找到了，具体可以到这个[yaoyao1987 github][1]，非常感谢yaoyao1987童鞋
 
-感谢yaoyao1987 bluefox1688，具体可以到这个[yaoyao1987 github][1]，[bluefox1688 github][1]，非常感谢yaoyao1987，bluefox1688童鞋
+感谢yaoyao1987 bluefox1688，具体可以到这个[yaoyao1987 github][1]，[bluefox1688 github][2]，非常感谢yaoyao1987，bluefox1688童鞋
 
 今天要讲的内容是基于yaoyao1987，bluefox1688 童鞋的多页面实例上根据个人需求改的
 
