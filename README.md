@@ -186,6 +186,8 @@ export default {
 entry: utils.getEntries('./src/'+config.build.assetsSubDirectory+'/**/*.js'),// 获得入口js文件
 
 ```
+
+``` bash
 # 【webpack.dev.conf.js】主要是开发的全局设置，主要是增加了以下代码，已经增加在JS文件里，这里只是做一个补充说明，具体请看`build/webpack.dev.conf.js`。
 
 #移除默认的
@@ -195,7 +197,6 @@ new HtmlWebpackPlugin({
   inject: true
 }),
 #添加
-```
 var pages = utils.getEntries('./src/'+config.build.assetsSubDirectory+'/**/*.html');
 
 for (var pathname in pages) {
@@ -212,7 +213,6 @@ for (var pathname in pages) {
     }
     module.exports.plugins.push(new HtmlWebpackPlugin(conf));
 }
-
 ```
 
 ``` bash
