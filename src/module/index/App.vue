@@ -11,7 +11,7 @@
       <mu-menu-item title="菜单 5"/>
     </mu-icon-menu>
   </mu-appbar>
-  <div style="padding-bottom:60px;">
+  <div class="demo" style="margin-bottom:60px;">
     <mu-pape :zDepth="1" v-for="item in list">
       <mu-card>
         <mu-card-header :title="item" subTitle="这个人很懒什么都没留下">
@@ -72,7 +72,6 @@
           this.trigger = this.$el
           this.$el.style.height=window.screen.height+'px'
           this.scroller = this.$el
-          console.log(this.list)
       },
       methods:{
           handleChange (val) {
@@ -109,6 +108,7 @@
 
 <style lang="stylus">
   #app
+    position:relative;
     height:100%;
     width:100%;
     overflow: auto;
