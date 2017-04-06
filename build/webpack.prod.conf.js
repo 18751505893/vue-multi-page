@@ -141,7 +141,14 @@ for (var pathname in pages) {
     var conf = {
         filename: pathname + '.html',
         template: pages[pathname],   // 模板路径
-        inject: true              // js插入位置
+        inject: true,              // js插入位置
+        minify: {
+            removeComments: true,
+            collapseWhitespace: true,
+            removeAttributeQuotes: true
+            // more options:
+            // https://github.com/kangax/html-minifier#options-quick-reference
+        },
 
     };
     if (pathname in module.exports.entry) {
