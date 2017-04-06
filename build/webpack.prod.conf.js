@@ -24,7 +24,7 @@ var webpackConfig = merge(baseWebpackConfig, {
       extract: true
     })
   },
-  devtool: config.build.productionSourceMap ? '#source-map' : false,
+  devtool: config.build.productionSourceMap ? '#source-map' : config.build.productionSourceMap,
   output: {
     path: config.build.assetsRoot,
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
@@ -40,7 +40,7 @@ var webpackConfig = merge(baseWebpackConfig, {
         warnings: false
       },
       //是否显示源码
-      sourceMap: false
+      sourceMap: config.build.productionSourceMap
     }),
     new CleanPlugin(['../dist']), //清空生成目录
     new webpack.optimize.OccurrenceOrderPlugin(),
