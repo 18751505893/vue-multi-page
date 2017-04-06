@@ -39,7 +39,8 @@ var webpackConfig = merge(baseWebpackConfig, {
       compress: {
         warnings: false
       },
-      sourceMap: true
+      //是否显示源码
+      sourceMap: false
     }),
     new CleanPlugin(['../dist']), //清空生成目录
     new webpack.optimize.OccurrenceOrderPlugin(),

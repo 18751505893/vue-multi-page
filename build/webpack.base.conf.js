@@ -18,10 +18,11 @@ module.exports = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json', '.styl'],
+    extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
+      '@': resolve('src'),
+      'muse-components': 'muse-ui/src'
     }
   },
   module: {
@@ -37,8 +38,8 @@ module.exports = {
         include: [resolve('src'), resolve('test')]
       },
       {
-          test: /\.styl$/,
-          loader: 'style-loader!css-loader!stylus-loader'
+          test: /muse-ui.src.*?js$/,
+          loader: 'babel-loader'
       },
       {
         //test: /\.(png|jpe?g|gif|svg|woff2?|eot|ttf|otf)(\?.*)?$/,
