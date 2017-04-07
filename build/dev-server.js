@@ -1,6 +1,7 @@
 require('./check-versions')()
 
 var config = require('../config')
+var configure = require('../config/configure')
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
 }
@@ -62,7 +63,7 @@ app.use(hotMiddleware)
 var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
 app.use(staticPath, express.static('./static'))
 
-var uri = 'http://localhost:' + port
+var uri = 'http://localhost:' + port + configure.starPath
 
 var _resolve
 var readyPromise = new Promise(resolve => {

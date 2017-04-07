@@ -112,8 +112,8 @@ function getEntry(globPath) {
          *!/
             // var basename = path.basename(entry, path.extname(entry), 'router.js') // 过滤router.js
             // ***************begin***************
-            // 当然， 你也可以加上模块名称, 即输出如下： { module/main: './src/module/index/main.js', module/test: './src/module/test/test.js' }
-            // 最终编译输出的文件也在module目录下， 访问路径需要时 localhost:8080/module/index.html
+            // 当然， 你也可以加上模块名称, 即输出如下： { module/main: './src/index/main.js', module/test: './src/test/test.js' }
+            // 最终编译输出的文件也在module目录下， 访问路径需要时 localhost:8080/index.html
             // slice 从已有的数组中返回选定的元素, -3 倒序选择，即选择最后三个
         var tmp = entry.split('/').splice(-3)
         var moduleName = tmp.slice(1, 2);
@@ -121,6 +121,6 @@ function getEntry(globPath) {
         entries[moduleName] = entry
     });
     // console.log(entries);
-    // 获取的主入口如下： { main: './src/module/index/main.js', test: './src/module/test/test.js' }
+    // 获取的主入口如下： { main: './src/index/main.js', test: './src/test/test.js' }
     return entries;
 }*/

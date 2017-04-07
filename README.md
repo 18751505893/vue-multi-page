@@ -12,7 +12,11 @@
 
 今天要讲的内容是基于yaoyao1987，bluefox1688 童鞋的多页面实例上根据个人需求改的
 
-## 优化了点啥
+## 2017-4-7优化了点啥
+
+1.新增configure.js文件 项目名称配置和启动自动打开入口配置
+2.打包时去除注释和空格
+
 ### 优化的内容
 我们先来讲讲，具体我们优化了什么内容。
 
@@ -35,7 +39,9 @@ npm run dev
 
 # 生产环境 build for production with minification
 npm run build
-npm run build前请修改config/index.js中 ProjectDirectory 的值 改为项目名称
+
+#注意
+执行 npm run dev npm run build  前请修改config/configure.js中 ProjectDirectory 的值 改为项目名称 启动路径为默认需要打开的页面
 怎么发布就随你啦！
 ```
 本地默认访问端口为8080，需要更改的童鞋请到项目根目录文件`config.js`修改。
